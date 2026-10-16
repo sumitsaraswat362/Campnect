@@ -1,0 +1,39 @@
+{
+  "name": "workspace",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "preinstall": "sh -c 'rm -f package-lock.json yarn.lock; case \"$npm_config_user_agent\" in pnpm/*) ;; *) echo \"Use pnpm instead\" >&2; exit 1 ;; esac'",
+    "build": "pnpm run typecheck && pnpm -r --if-present run build",
+    "build:deploy": "pnpm run typecheck && pnpm --filter @workspace/campnect run build && pnpm --filter @workspace/api-server run build",
+    "start": "pnpm run start:demo",
+    "start:backend": "pnpm --filter @workspace/api-server run start",
+    "cap:doctor": "pnpm exec cap doctor",
+    "cap:build": "PORT=22821 BASE_PATH=/ VITE_API_BASE_URL=\"${VITE_API_BASE_URL:-https://campnect.perinol.com/api}\" pnpm --filter @workspace/campnect run build && pnpm exec cap sync android",
+    "cap:check": "pnpm run cap:build && pnpm run cap:doctor",
+    "cap:apk:debug": "pnpm run cap:build && bash android/gradlew -p android assembleDebug --no-daemon",
+    "typecheck:libs": "tsc --build",
+    "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck",
+    "dev:demo": "VITE_DEMO_MODE=true PORT=5000 BASE_PATH=/ pnpm --filter @workspace/campnect run dev",
+    "build:demo": "VITE_DEMO_MODE=true pnpm --filter @workspace/campnect run build",
+    "start:demo": "node scripts/serve-demo.mjs",
+    "test:demo:server": "node --test scripts/serve-demo.test.mjs",
+    "test:demo:production": "playwright test --config playwright.production.config.ts",
+    "test:demo": "tsx --test artifacts/campnect/src/demo/tests/*.test.ts",
+    "test:demo:browser": "playwright test",
+    "test:navigation": "tsx --test artifacts/campnect/src/navigation/*.test.ts"
+  },
+  "private": true,
+  "devDependencies": {
+    "@capacitor/android": "8.5.3",
+    "@capacitor/cli": "8.5.3",
+    "@capacitor/filesystem": "8.1.2",
+    "@capacitor/keyboard": "8.0.5",
+    "@capacitor/splash-screen": "8.0.2",
+    "@onesignal/capacitor-plugin": "^1.1.8",
+    "@playwright/test": "^1.64.1",
+    "prettier": "^3.9.6",
+    "tsx": "^4.21.0",
+    "typescript": "~5.9.3"
+  }
+}
