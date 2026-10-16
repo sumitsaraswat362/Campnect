@@ -1,0 +1,56 @@
+// @ts-nocheck
+/** Blocklist of disposable / temporary email service domains */
+const DISPOSABLE_DOMAINS = new Set([
+  'mailinator.com', 'guerrillamail.com', 'guerrillamail.net', 'guerrillamail.org',
+  'guerrillamail.biz', 'guerrillamail.de', 'guerrillamail.info', 'grr.la',
+  'tempmail.com', 'temp-mail.org', 'temp-mail.io', 'throwam.com',
+  'throwaway.email', 'throwam.com', '10minutemail.com', '10minutemail.net',
+  '10minutemail.org', '10minemail.com', 'minutemail.com',
+  'sharklasers.com', 'guerrillamailblock.com', 'spam4.me', 'yopmail.com',
+  'yopmail.fr', 'cool.fr.nf', 'jetable.fr.nf', 'nospam.ze.tc',
+  'nomail.xl.cx', 'mega.zik.dj', 'speed.1s.fr', 'courriel.fr.nf',
+  'moncourrier.fr.nf', 'monemail.fr.nf', 'monmail.fr.nf',
+  'dispostable.com', 'fakeinbox.com', 'mailnesia.com', 'mailnull.com',
+  'maildrop.cc', 'mailseal.de', 'spamgourmet.com', 'spamgourmet.net',
+  'spamgourmet.org', 'trashmail.com', 'trashmail.me', 'trashmail.at',
+  'trashmail.io', 'trashmail.net', 'trashmail.org', 'trashmailer.com',
+  'discard.email', 'tempinbox.com', 'spambox.us', 'spamfree24.org',
+  'spamfree24.de', 'spamfree24.eu', 'spamfree24.info', 'spamfree24.net',
+  'getnada.com', 'tempr.email', 'trbvm.com', 'byom.de', 'mailtemp.info',
+  'tmpmail.org', 'tmpmail.net', 'temporary-mail.net', 'fakemailgenerator.com',
+  'tempsky.com', 'einrot.com', 'tempmailo.com', 'tempemail.co',
+  'armyspy.com', 'cuvox.de', 'dayrep.com', 'einrot.com', 'fleckens.hu',
+  'gustr.com', 'jourrapide.com', 'rhyta.com', 'teleworm.us', 'superrito.com',
+  'igpost.com', 'harakirimail.com', 'drdrb.net', 'drdrb.com',
+  'spamgob.com', 'getairmail.com', 'filzmail.com', 'mailzilla.com',
+  'mailzilla.org', 'meltmail.com', 'netmails.com', 'netmails.net',
+  'reallymymail.com', 'mailbolt.com', 'anonymstermail.com',
+  'kasmail.com', 'mailscrap.com', 'prtnx.com', 'sogetthis.com',
+  'suremail.info', 'spamgob.com', 'tempalias.com', 'tempemail.biz',
+  'tempemail.net', 'tempemail.org', 'whtjddn.33mail.com', 'crap.handcrafted.jp',
+  'e4ward.com', 'myfastmail.com', 'noblepioneer.com', 'ownmail.net',
+  'pecinan.com', 'pecinan.net', 'pecinan.org', 'shut.ws', 'spam.su',
+  'supermailer.jp', 'suremail.info', 'sweetxxx.de', 'thisisnotmyrealemail.com',
+  'mailmetrash.com', 'nowmymail.com', 'rklips.com', 'thankyou2010.com',
+  'yandex-mail.ru', 'zippymail.info', '0-mail.com', '0815.ru', '0815.su',
+  'cpdrc.com', 'deadaddress.com', 'discard.email', 'despam.it',
+  'dontsendmespam.de', 'dumpmail.de', 'email60.com', 'emailias.com',
+  'emailinfive.com', 'emailisvalid.com', 'emailtemporario.com.br',
+  'emailto.de', 'emailwarden.com', 'emailx.at.hm', 'emailxfer.com',
+  'fastacura.com', 'fastchevy.com', 'fastchrysler.com', 'fastkawasaki.com',
+  'fastmazda.com', 'fastmitsubishi.com', 'fastnissan.com', 'fastsubaru.com',
+  'fastsuzuki.com', 'fasttoyota.com', 'fastyamaha.com', 'get1mail.com',
+  'getonemail.com', 'ghosttexter.de', 'girlsundertheinfluence.com',
+  'h8s.org', 'haltospam.com', 'hidzz.com', 'hochsitze.com', 'hpc.tw',
+  'hulapla.de', 'icx.in', 'imails.info', 'inbax.tk', 'instant-mail.de',
+  'iroid.com', 'it2-mail.tk', 'jetable.com', 'jetable.net', 'jetable.org',
+  'jnxjn.com', 'joliekemulder.nl', 'junk.to', 'kasmail.com', 'kurzepost.de',
+  'landmail.de', 'letthemeatspam.com', 'lol.ovpn.to', 'lookugly.com',
+  'lortemail.dk', 'losemymail.com', 'lyft.live',
+])
+
+export function isDisposableEmail(email: string): boolean {
+  const domain = email.split('@')[1]?.toLowerCase()
+  if (!domain) return true
+  return DISPOSABLE_DOMAINS.has(domain)
+}
