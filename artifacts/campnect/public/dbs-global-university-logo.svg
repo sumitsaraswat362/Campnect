@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 300" role="img" aria-labelledby="title">
+  <title id="title">DBS Global University</title>
+  <rect width="320" height="300" rx="28" fill="#fff"/>
+  <g text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" fill="#71205f">
+    <text x="160" y="112" font-size="78" font-weight="700" letter-spacing="-8">DBS</text>
+    <path d="M91 66h138M91 120h138M102 132h116" fill="none" stroke="#71205f" stroke-width="4"/>
+    <path d="M171 23l-18 55h19l-26 70 55-82h-21l16-43z" fill="#e31324"/>
+    <text x="160" y="153" font-size="17" letter-spacing="12">DEHRADUN</text>
+    <text x="160" y="208" font-size="25" font-weight="700" letter-spacing="3">DBS GLOBAL</text>
+    <text x="160" y="244" font-size="25" letter-spacing="7">UNIVERSITY</text>
+  </g>
+</svg>

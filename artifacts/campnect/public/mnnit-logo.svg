@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" role="img" aria-labelledby="title">
+  <title id="title">Motilal Nehru National Institute of Technology Allahabad emblem</title>
+  <defs>
+    <linearGradient id="gold" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#ffc348"/><stop offset="1" stop-color="#e48813"/>
+    </linearGradient>
+    <radialGradient id="cream"><stop stop-color="#fff4df"/><stop offset="1" stop-color="#eec28c"/></radialGradient>
+  </defs>
+  <rect width="360" height="360" fill="none"/>
+  <g transform="translate(180 180)">
+    <path d="M0-157 18-135 47-151 58-123 90-131 94-99 126-95 122-63 151-47 135-18 157 0 135 18 151 47 122 63 126 95 94 99 90 131 58 123 47 151 18 135 0 157-18 135-47 151-58 123-90 131-94 99-126 95-122 63-151 47-135 18-157 0-135-18-151-47-122-63-126-95-94-99-90-131-58-123-47-151-18-135Z" fill="url(#gold)" stroke="#452613" stroke-width="5"/>
+    <circle r="126" fill="#e6e1e0" stroke="#281c1b" stroke-width="5"/>
+    <circle r="91" fill="url(#cream)" stroke="#9a5a27" stroke-width="3"/>
+    <text y="-101" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#1e1b1c">MOTILAL NEHRU NATIONAL</text>
+    <text y="117" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#1e1b1c">INSTITUTE OF TECHNOLOGY</text>
+    <path d="M-53 19c20 9 40 9 59 0 18-9 37-9 55 0-14 28-45 44-81 44-36 0-67-16-81-44 17-9 30-9 48 0Z" fill="#79c5df" stroke="#27181b" stroke-width="4"/>
+    <path d="M-53-32h31l14 13 14-13h31v47c-18-9-36-9-55 0-18-9-35-9-52 0Z" fill="#26191a" stroke="#1a1112" stroke-width="4"/>
+    <path d="M-18-31v47M-7-19v35" stroke="#fff" stroke-width="2"/>
+    <path d="M25 35c-15-19 2-43 2-43s17 24 2 43c8-5 12-13 12-22 0-17-14-35-14-35S13-4 13 13c0 9 4 17 12 22Z" fill="#f8db13" stroke="#c2361c" stroke-width="3"/>
+    <path d="M55-40c15 12 15 31 0 43M55-40C40-28 40-9 55 3M55-40v43M32-19h46M38-35l34 34M72-35 38-1" fill="none" stroke="#26191a" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>

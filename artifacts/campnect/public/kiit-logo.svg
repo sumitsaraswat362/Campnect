@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" role="img" aria-labelledby="title">
+  <title id="title">Kalinga Institute of Industrial Technology logo</title>
+  <rect width="300" height="300" fill="#fff"/>
+  <g fill="none" stroke="#00ad5a" stroke-width="7" stroke-linecap="round">
+    <path d="M92 100v33m15-39v44m15-49v54m15-58v61m15-61v61m15-57v54m15-49v44m15-39v33"/>
+    <path d="M75 123c20 42 130 42 150 0M91 138c16 29 102 29 118 0M109 151c12 16 70 16 82 0"/>
+    <path d="M99 161l-11 19m27-14-6 22m22-18v23m22-23v23m22-27 6 22m11-27 11 19"/>
+  </g>
+  <text x="150" y="83" text-anchor="middle" fill="#00ad5a" font-family="Arial, sans-serif" font-size="35" font-weight="800">KIIT</text>
+  <text x="150" y="222" text-anchor="middle" fill="#00ad5a" font-family="Arial, sans-serif" font-size="21" font-weight="800">KALINGA INSTITUTE</text>
+  <text x="150" y="244" text-anchor="middle" fill="#00ad5a" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="1">OF INDUSTRIAL TECHNOLOGY</text>
+</svg>
