@@ -1,0 +1,15 @@
+.help-page { min-height: 100%; background: var(--color-bg); padding-bottom: 24px; overflow-x: hidden; box-sizing: border-box; }
+.help-wrap { max-width: 720px; margin: 0 auto; }
+.help-press { min-height: 44px; cursor: pointer; font-family: var(--font-body); transition: background-color 120ms ease; }
+.help-press:active { background: var(--color-surface-hover) !important; }
+.help-press:focus-visible, .help-input:focus-visible, .help-link:focus-visible, h1.help-h1:focus-visible {
+  outline: 2px solid var(--color-text-primary); outline-offset: -2px; border-radius: 6px;
+}
+.help-search:focus-within { outline: 2px solid var(--color-text-primary); outline-offset: 1px; }
+.help-input:focus-visible { outline: none; }
+.help-chips { display: flex; gap: 8px; overflow-x: auto; padding: 4px 16px 6px; scrollbar-width: none; overscroll-behavior-x: contain; touch-action: pan-x pan-y; }
+.help-chips::-webkit-scrollbar { display: none; }
+.help-chips button { flex: 0 0 auto; }
+.help-chips button:focus-visible { outline: 2px solid var(--color-text-primary); outline-offset: 2px; }
+.help-text { overflow-wrap: anywhere; word-break: break-word; }
+@media (prefers-reduced-motion: reduce) { .help-press { transition: none; } }

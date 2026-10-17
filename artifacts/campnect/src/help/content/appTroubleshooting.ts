@@ -1,0 +1,90 @@
+import { createHelpArticle } from '../helpModel'
+
+export const appTroubleshootingArticles = [
+  createHelpArticle({
+    id: 'app-not-opening', slug: 'campnect-will-not-open', title: 'Campnect will not open', category: 'App Issues & Troubleshooting',
+    description: 'Check connectivity and any maintenance or update notice displayed by Campnect.',
+    keywords: ['app will not open', 'loading', 'maintenance', 'startup'],
+    aliases: ['app stuck on startup', 'cannot open Campnect', 'blank app screen'],
+    steps: [
+      { title: 'Check your connection', body: 'Confirm your device is connected to the internet, then try opening Campnect again.' },
+      { title: 'Read any status notice', body: 'If Campnect displays a maintenance or update notice, follow the instructions shown there.' },
+      { title: 'Try again later', body: 'If the same error continues, wait and retry rather than clearing app data or reinstalling without understanding local-data effects.' },
+    ],
+    notes: ['No dedicated crash-report or technical bug-report form was verified. These checks do not guarantee recovery.'],
+    relatedArticles: ['network-errors', 'app-update', 'media-loading'],
+  }),
+  createHelpArticle({
+    id: 'network-errors', slug: 'network-or-temporary-service-errors', title: 'Network or temporary service errors', category: 'App Issues & Troubleshooting',
+    description: 'Some Campnect content and actions require a working internet connection and an available service.',
+    keywords: ['network error', 'connection', 'server error', 'retry'],
+    aliases: ['app offline', 'service unavailable', 'request failed', 'cannot connect'],
+    steps: [
+      { title: 'Check your device connection', body: 'Confirm Wi-Fi or mobile data is available.' },
+      { title: 'Retry the action', body: 'Use the screen’s retry action if one is shown.' },
+      { title: 'Check for a status notice', body: 'If Campnect displays maintenance information, follow that notice and try again later.' },
+    ],
+    notes: ['A temporary error does not guarantee that an unsaved form or upload was retained.'],
+    relatedArticles: ['app-not-opening', 'post-upload', 'clip-upload-troubleshooting', 'notification-issues'],
+  }),
+  createHelpArticle({
+    id: 'media-loading', slug: 'images-or-media-not-loading', title: 'Images or media are not loading', category: 'App Issues & Troubleshooting',
+    description: 'Check connectivity and reopen the specific image, Clip, or Glimpse that is not loading.',
+    keywords: ['media loading', 'image missing', 'video playback', 'audio'],
+    aliases: ['photos not loading', 'black video screen', 'glimpse will not play', 'clip not loading'],
+    steps: [
+      { title: 'Check connectivity', body: 'Confirm your device is online.' },
+      { title: 'Reopen the item', body: 'Return to its list or feed and open the item again.' },
+      { title: 'Check availability', body: 'If it remains unavailable, the item may no longer be accessible or may have been removed.' },
+    ],
+    notes: ['The app does not guarantee that an unavailable item can be recovered.'],
+    relatedArticles: ['clip-unavailable', 'glimpse-expired', 'network-errors'],
+  }),
+  createHelpArticle({
+    id: 'camera-permission', slug: 'camera-permission-for-glimpse', title: 'Allow camera access for Glimpse', category: 'App Issues & Troubleshooting',
+    description: 'Glimpse capture requires camera access when using the in-app camera.',
+    keywords: ['camera permission', 'glimpse capture', 'camera access'],
+    aliases: ['allow camera', 'camera blocked', 'cannot take glimpse photo'],
+    steps: [
+      { title: 'Start Glimpse capture', body: 'Open Glimpses and choose “Create”.' },
+      { title: 'Allow the permission request', body: 'When your browser or device asks for camera access, allow it to capture a Glimpse.' },
+      { title: 'Review device settings if blocked', body: 'If permission was denied, use the operating system or browser site settings to review camera access.' },
+    ],
+    notes: ['Browser and native camera permissions are controlled separately. If the screen offers a gallery picker, you can use it instead of live capture.'],
+    relatedArticles: ['glimpse-camera', 'microphone-permission'],
+  }),
+  createHelpArticle({
+    id: 'microphone-permission', slug: 'microphone-permission-for-voice-notes', title: 'Allow microphone access for voice notes', category: 'App Issues & Troubleshooting',
+    description: 'Recording a chat voice note requires microphone permission.',
+    keywords: ['microphone', 'voice note', 'audio permission', 'recording'],
+    aliases: ['allow microphone for chat', 'voice note not recording', 'mic permission'],
+    steps: [
+      { title: 'Open a conversation', body: 'Open Messages and select a conversation.' },
+      { title: 'Start a voice note', body: 'Use the microphone control in the composer.' },
+      { title: 'Allow microphone access', body: 'When prompted, allow Campnect or your browser to use the microphone. Review device or site settings if access was denied.' },
+    ],
+    notes: ['A voice note is a recorded message; this is not a voice/video calling workflow.'],
+    relatedArticles: ['message-media', 'camera-permission'],
+  }),
+  createHelpArticle({
+    id: 'app-update', slug: 'use-an-app-update-notice', title: 'Use an app update notice', category: 'App Issues & Troubleshooting',
+    description: 'When Campnect displays an update notice, use its “Update now” action if you want to open the configured update destination.',
+    keywords: ['app update', 'update now', 'new version', 'store'],
+    aliases: ['update Campnect', 'where to get an update', 'update problem'],
+    steps: [
+      { title: 'Read the update notice', body: 'Review the title and message shown in the Campnect update notice.' },
+      { title: 'Choose an available action', body: 'Use “Update now” to open the destination configured for that notice, or choose the available later/dismiss action when offered.' },
+      { title: 'Follow the destination', body: 'Complete any update steps on the store page Campnect opens.' },
+    ],
+    notes: ['A notice and update destination depend on the app configuration. Help does not promise a particular store listing, release timing, or update availability.'],
+    relatedArticles: ['app-not-opening', 'network-errors'],
+  }),
+  createHelpArticle({
+    id: 'technical-report-unavailable', slug: 'report-a-technical-app-problem', title: 'Report a technical app problem', category: 'App Issues & Troubleshooting',
+    description: 'No dedicated technical bug-report form or route was verified in the current Campnect app.',
+    keywords: ['bug report', 'technical problem', 'crash report', 'contact support'],
+    aliases: ['report app crash', 'send bug report', 'app issue support'],
+    body: ['“Report profile”, “Report post”, and other content-report controls submit safety/content reports, not technical bug reports. General support is available only if the app’s support-contact configuration is set; no email fallback is provided here.'],
+    relatedArticles: ['network-errors', 'app-not-opening', 'report'],
+  }),
+]

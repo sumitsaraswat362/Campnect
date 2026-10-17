@@ -1,0 +1,56 @@
+import { createHelpArticle } from '../helpModel'
+
+export const verificationArticles = [
+  createHelpArticle({
+    id: 'college-verification', slug: 'verify-college-status-with-id', title: 'Verify college status with an ID', category: 'Verification',
+    description: 'The student-status verification screen requests an image of the college ID card and a selfie holding that ID.',
+    keywords: ['college verification', 'student status', 'college id', 'selfie', 'verified badge'],
+    aliases: ['verify my college', 'student ID verification', 'get verified', 'college badge verification'],
+    steps: [
+      { title: 'Open the verification screen', body: 'Follow the college-verification step shown during account setup or when Campnect requires verification.' },
+      { title: 'Select both images', body: 'Provide the front of your college ID card and a selfie holding that ID. Both images are required.' },
+      { title: 'Submit for verification', body: 'Choose “Submit for verification” and follow the result shown.' },
+      { title: 'Wait for status to update', body: 'The screen displays Under Review while verification is pending; Campnect indicates when approval has been processed.' },
+    ],
+    notes: ['The review screen displays an estimated notification window, but it is not a guaranteed completion deadline. Only submit your own accurate verification materials.'],
+    troubleshooting: [{ problem: 'An image is rejected.', solution: 'Choose an image file accepted by the current upload policy and provide a readable student ID and selfie.' }],
+    relatedArticles: ['verification-pending', 'verification-status', 'otp', 'signup-email'],
+    searchPriority: 4,
+  }),
+  createHelpArticle({
+    id: 'verification-pending', slug: 'college-verification-under-review', title: 'College verification is under review', category: 'Verification',
+    description: 'Under Review means the verification photos were submitted and an approval decision has not yet appeared.',
+    keywords: ['under review', 'college verification', 'pending', 'waiting'],
+    aliases: ['verification pending', 'how long to verify college', 'student status not approved'],
+    body: ['The screen says that manual review is in progress and that Campnect will notify you when a decision is available. Its displayed time estimate is not a guaranteed review deadline.'],
+    notes: ['If the screen remains unchanged, keep following the status shown; there is no verified manual status-check or escalation contact in Help.'],
+    relatedArticles: ['college-verification', 'verification-status'],
+  }),
+  createHelpArticle({
+    id: 'verification-status', slug: 'verification-approved-or-rejected', title: 'Check a college verification result', category: 'Verification',
+    description: 'Campnect stores a verification status and updates the account screen when a decision is available.',
+    keywords: ['approved', 'rejected', 'verification result', 'badge'],
+    aliases: ['did my student verification pass', 'verification was declined', 'college badge status'],
+    body: ['When verification is approved, the account receives the verified status. If the screen returns to the upload form instead of showing Under Review, check whether it allows you to submit the requested images again.'],
+    notes: ['The app does not display a verified manual appeal or a guaranteed review-time promise on the college verification screen.'],
+    relatedArticles: ['college-verification', 'verification-pending', 'login-vs-signup-code'],
+  }),
+  createHelpArticle({
+    id: 'verification-email-vs-id', slug: 'email-vs-college-id-verification', title: 'Email verification vs. college ID verification', category: 'Verification',
+    description: 'Email OTP verification and photo-based college-status verification are separate checks.',
+    keywords: ['email verification', 'otp', 'college id', 'student verification'],
+    aliases: ['why another verification', 'email code vs student card', 'college verification badge'],
+    body: ['A 6-digit email OTP confirms access to the email address for a specific signup, login, or recovery flow. The separate college-verification screen asks for an ID-card photo and a selfie holding it to review student status.'],
+    notes: ['Completing one flow does not automatically complete the other.'],
+    relatedArticles: ['otp', 'login-vs-signup-code', 'college-verification'],
+  }),
+  createHelpArticle({
+    id: 'college-verification-required', slug: 'why-college-verification-is-required', title: 'Why is college verification required?', category: 'Verification',
+    description: 'Campnect may require a verified college status before granting access to college-restricted areas.',
+    keywords: ['verification required', 'college access', 'campus', 'student status'],
+    aliases: ['blocked until verified', 'cannot enter app before verification', 'campus access'],
+    body: ['If Campnect sends you to the verification screen, follow the student-status verification flow shown there. Protected college features remain unavailable until the app confirms the required status.'],
+    notes: ['Verification eligibility and feature access are determined by the current account role and app configuration.'],
+    relatedArticles: ['college-verification', 'verification-pending', 'signup-email'],
+  }),
+]
