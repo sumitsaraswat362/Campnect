@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "793077843653",
+    "project_id": "campnect-c7369",
+    "storage_bucket": "campnect-c7369.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:793077843653:android:4d26b2864269c4c3ad12ac",
+        "android_client_info": {
+          "package_name": "com.campnect.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD15gKnhxizCfvR8FTfk4J17YwHL8iF9HY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
