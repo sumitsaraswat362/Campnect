@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campnect — Offline</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; background: #0f172a; color: #f8fafc; text-align: center; padding: 24px; box-sizing: border-box; }
+    .card { background: #1e293b; padding: 36px 28px; border-radius: 20px; max-width: 420px; box-shadow: 0 20px 40px rgba(0,0,0,0.4); border: 1px solid #334155; }
+    .icon { font-size: 52px; margin-bottom: 16px; }
+    h1 { font-size: 24px; font-weight: 700; margin: 0 0 10px; color: #ffffff; }
+    p { font-size: 14px; line-height: 1.6; color: #94a3b8; margin: 0 0 24px; }
+    .btn { display: inline-block; background: #3b82f6; color: #ffffff; font-weight: 600; padding: 12px 28px; border-radius: 12px; text-decoration: none; border: none; cursor: pointer; transition: background 0.2s; }
+    .btn:hover { background: #2563eb; }
+    .helpline { margin-top: 24px; font-size: 12px; color: #64748b; border-top: 1px solid #334155; pt: 16px; padding-top: 16px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="icon">📡</div>
+    <h1>You are currently offline</h1>
+    <p>Campnect is in offline mode. Cached posts, timetable, and campus bookmarks remain accessible while waiting for reconnection.</p>
+    <button class="btn" onclick="window.location.reload()">Try Reconnecting</button>
+    <div class="helpline">Campus Security & Emergency: +91 11 2690 7400</div>
+  </div>
+</body>
+</html>
