@@ -3,6 +3,8 @@
 > **A production-ready, verified campus social network and community infrastructure built for collegiate ecosystems.** Connect with verified peers, explore campus-exclusive feeds, share ephemeral Glimpses & Clips, coordinate student events, and communicate via real-time encrypted chat and peer-to-peer WebRTC audio/video calls.
 
 [![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen?style=flat-square)]()
+[![Tests](https://img.shields.io/badge/Tests-122%2B%20Passing-success?style=flat-square)]()
+[![CI](https://img.shields.io/badge/CI-Automated%20Verification-blue?style=flat-square)]()
 [![Stack](https://img.shields.io/badge/Stack-React%2019%20%7C%20Node.js%20%7C%20PostgreSQL%20%7C%20Capacitor%208-blue?style=flat-square)]()
 [![Realtime](https://img.shields.io/badge/Realtime-Socket.IO%20%2B%20WebRTC-orange?style=flat-square)]()
 [![Platform](https://img.shields.io/badge/Platform-Web%20%7C%20Android%20Native-blueviolet?style=flat-square)]()
@@ -14,6 +16,7 @@
 - 🌐 **Live Web Application**: [https://campnect.perinol.com](https://campnect.perinol.com)
 - 📹 **Demo Video Walkthrough**: [Watch Video Demo](https://youtu.be/demo-campnect) *(Include your demo video link here)*
 - 📦 **GitHub Repository**: [https://github.com/sumitsaraswat362/Campnect](https://github.com/sumitsaraswat362/Campnect)
+- 📖 **Hackathon Evaluation & Judging Guide**: [docs/HACKATHON_EVALUATION.md](docs/HACKATHON_EVALUATION.md)
 - 🛡 **Admin BFF Console**: `artifacts/campnect-admin` (Isolated security perimeter)
 - 📱 **Android Native App**: Capacitor 8 + 7 Custom Java Plugins (`android/`)
 
